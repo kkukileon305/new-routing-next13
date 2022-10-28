@@ -15,7 +15,7 @@ export default async function GlobalNav() {
     <nav className={styles.globalNav}>
       <div className={styles.container}>
         <h1 className={styles.title}>
-          <Link href={'/'}>Go Home</Link>
+          <Link href={'/'}>Home</Link>
         </h1>
 
         <ul className={styles.uList}>

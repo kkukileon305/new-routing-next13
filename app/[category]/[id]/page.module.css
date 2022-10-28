@@ -1,7 +1,9 @@
 .title {
   margin: 0;
+  color: rgb(107, 169, 216);
 }
 
 .price {
   font-weight: bold;
+  color: rgb(107, 169, 216);
 }
