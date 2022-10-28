@@ -1,0 +1,21 @@
+.container {
+  width: 20rem;
+  border-right: 1px solid rgb(107, 169, 216);
+  color: rgb(107, 169, 216);
+}
+
+.title {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+.link {
+  display: block;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.link:hover {
+  color: white;
+  background: rgb(107, 169, 216);
+}

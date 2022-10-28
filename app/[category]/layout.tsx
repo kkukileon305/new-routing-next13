@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import CategoryNav from './CategoryNav';
 import styles from './layout.module.css';
 
 export default function CategoryLayout({
@@ -12,7 +13,7 @@ export default function CategoryLayout({
 }) {
   return (
     <div className={styles.container}>
-      <h3>Category layout</h3>
+      <CategoryNav category={params.category} />
       <section>{children}</section>
     </div>
   );

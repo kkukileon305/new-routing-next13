@@ -1,5 +1,6 @@
 import GlobalNav from './GlobalNav';
 import './globals.css';
+import styles from './layout.module.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <GlobalNav />
-        <main>{children}</main>
+        <main className={styles.container}>{children}</main>
       </body>
     </html>
   );
