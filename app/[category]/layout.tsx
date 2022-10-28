@@ -14,7 +14,7 @@ export default function CategoryLayout({
   return (
     <div className={styles.container}>
       <CategoryNav category={params.category} />
-      <section>{children}</section>
+      <section className={styles.product}>{children}</section>
     </div>
   );
 }
