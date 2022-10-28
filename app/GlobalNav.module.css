@@ -19,6 +19,7 @@
 .uList {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
   margin-top: 1rem;
 }
@@ -29,4 +30,9 @@
   border-radius: 2rem;
   padding: 0.5rem 1rem;
   font-weight: bold;
+}
+
+.link:hover {
+  background-color: rgb(107, 169, 216);
+  color: white;
 }

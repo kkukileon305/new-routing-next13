@@ -1,33 +1,29 @@
 import Link from 'next/link';
+import { CategoriesResponse } from '../interface';
 import styles from './GlobalNav.module.css';
 
-interface NavItem {
-  url: string;
-  title: string;
-}
+const getCategories = async (): Promise<CategoriesResponse> => {
+  const res = await fetch('https://dummyjson.com/products/categories');
 
-const navItems: NavItem[] = [
-  {
-    title: 'Home',
-    url: '/',
-  },
-  {
-    title: 'Products',
-    url: '/products',
-  },
-];
+  return res.json();
+};
 
-export default function GlobalNav() {
+export default async function GlobalNav() {
+  const categories = await getCategories();
+
   return (
     <nav className={styles.globalNav}>
       <div className={styles.container}>
-        <h1 className={styles.title}>This is Global Nav.</h1>
+        <h1 className={styles.title}>
+          <Link href={'/'}>Go Home</Link>
+        </h1>
 
         <ul className={styles.uList}>
-          {navItems.map(navItem => (
-            <li key={navItem.title}>
-              <Link className={styles.link} href={navItem.url}>
-                {navItem.title}
+          {categories.map(category => (
+            <li key={category}>
+              <Link href={category} className={styles.link}>
+                {category[0].toUpperCase()}
+                {category.slice(1)}
               </Link>
             </li>
           ))}
